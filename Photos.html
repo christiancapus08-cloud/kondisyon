@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photos</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111827;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+h1{
+    text-align:center;
+    margin:50px 0;
+    font-size:50px;
+}
+
+.gallery{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding-bottom:50px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.back{
+    display:block;
+    width:180px;
+    margin:40px auto;
+    text-align:center;
+    text-decoration:none;
+    padding:15px;
+    border-radius:50px;
+    background:#38bdf8;
+    color:black;
+    font-weight:bold;
+}
+
+.back:hover{
+    background:#22d3ee;
+}
+
+/* Lightbox */
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+.popup img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">GIN KALBO</div>
+
+<nav>
+<a href="Home.html">Home</a>
+<a href="Photos.html">Photos</a>
+<a href="Contact.html">Contact</a>
+</nav>
+
+</header>
+
+<h1>PHOTO GALLERY</h1>
+
+<div class="gallery">
+
+<img src="kondisyon.jpg" alt="" onclick="openImage(this.src)">
+<img src="1.jpg" alt="" onclick="openImage(this.src)">
+<img src="2.jpg" alt="" onclick="openImage(this.src)">
+<img src="3.jpg" alt="" onclick="openImage(this.src)">
+<img src="4.jpg" alt="" onclick="openImage(this.src)">
+<img src="5.jpg" alt="" onclick="openImage(this.src)">
+<img src="6.jpg" alt="" onclick="openImage(this.src)">
+
+</div>
+
+<!-- Enlarged Image -->
+<div class="popup" id="popup" onclick="closeImage()">
+    <img id="popup-img">
+</div>
+
+<a href="Home.html" class="back">← Home</a>
+
+<script>
+function openImage(src){
+    document.getElementById("popup").style.display="flex";
+    document.getElementById("popup-img").src=src;
+}
+function closeImage(){
+    document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>

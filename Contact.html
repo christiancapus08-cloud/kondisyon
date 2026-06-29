@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - GIN KALBO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(-45deg,#0f172a,#111827,#1e293b,#020617);
+    background-size:400% 400%;
+    animation:bg 15s ease infinite;
+    color:white;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,.4);
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    margin:150px auto;
+    background:rgba(255,255,255,.05);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#38bdf8;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input,
+textarea{
+    padding:15px;
+    margin-bottom:20px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+textarea{
+    resize:none;
+    height:150px;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background:#38bdf8;
+    color:black;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(56,189,248,.4);
+}
+
+.info{
+    text-align:center;
+    margin-top:30px;
+    color:#cbd5e1;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">GIN KALBO</div>
+
+<nav>
+   	<a href="Home.html">Home</a>
+	<a href="Photos.html">Photos</a>
+	<a href="Contact.html">Contact</a>
+
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Contact Us</h1>
+
+<form>
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<div class="info">
+    <p>📞 Phone: 09475444831</p>
+    <p>📧 Email: christian.capus08@gmail.com.com</p>
+    <p>📍 Address: Sitio Ruhat 3 Lower Brgy.Mambugan Antipolo City</p>
+</div>
+
+</div>
+
+</body>
+</html>
